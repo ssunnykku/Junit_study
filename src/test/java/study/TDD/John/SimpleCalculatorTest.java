@@ -1,4 +1,4 @@
-package study.test.John;
+package study.TDD.John;
 
 import org.junit.jupiter.api.Test;
 

@@ -23,26 +23,31 @@
 - Spring Boot 2.0버전부터 JUnit5 버전을 사용
 - JUnit5는 크게 Jupiter, Platform, Vintage 모듈로 구성됨
         
-## JUnit 모듈 설명
-### JUnit Jupiter
-- TestEngin API 구현체로 JUnit5를 구현하고 있음
-- 테스트의 실제 구현체는 별도 모듈 역할을 수행하는데, 그 모듈 중 하나가 Jupiter-Engine임
-- 이 모듈은 Jupiter-API를 사용하여 작성한 테스트 코드를 발견하고 실행하는 역할을 수행
-- 개발자가 테스트 코드를 작성할 때 사용됨
+## JUnit 모듈
+<p align="center">
+<img src="img.png" width="70%">
+</p>
 
 ### JUnit Platform
 - Test를 실행하기 위한 뼈대
 - Test를 발견하고 테스트 계획을 생성하는 TestEngine 인터페이스를 가지고 있음
 - TestEngine을 통해 Test를 발견하고, 수행 및 결과를 보고함
 - 각종 IDE 연동을 보조하는 역할을 수행 (콘솔 출력 등)
-- (Platform = TestEnginAPI + Console Launcher + JUnit4Based Runner 몌)
+- (Platform = TestEnginAPI + Console Launcher + JUnit4Based Runner)
+
+### JUnit Jupiter
+- TestEngin API 구현체로 JUnit5를 구현하고 있음
+- 테스트의 실제 구현체는 별도 모듈 역할을 수행하는데, 그 모듈 중 하나가 Jupiter-Engine임
+- 이 모듈은 Jupiter-API를 사용하여 작성한 테스트 코드를 발견하고 실행하는 역할을 수행
+- 개발자가 테스트 코드를 작성할 때 사용됨
+
 
 ### JUnit Vintage
 - TestEngine API 구현체로 JUnit 3,4를 구현하고 있음
 - 기존 JUnit 3,4 버전으로 작성된 테스트 코드를 실행할 때 사용됨
 - Vintage-Engine 모듈을 포함하고 있음
-![IMG_04AFFB2F5442-1.jpeg](..%2F..%2F..%2F..%2F..%2FDownloads%2FIMG_04AFFB2F5442-1.jpeg)
 
+## 통합테스트와 단위테스트
 
 ### 통합테스트
 - 여러 기능을 조합하여 전체 비지니스 로직이 제대로 동작하는지 확인하는 것을 의미
@@ -63,7 +68,32 @@
 >   + Self-Validating: 테스트는 그 자체로 실행하여 결과를 확인할 수 있어야 함
 >   + Timely : 단위 테스트는 비지니스 코드가 완성되기 전에 구성하고 테스트가 가능해야 함
 >               (코드가 완성되기 전부터 테스트가 따라와야 한다는 TDD의 원칙을 담고 있음)
-> 
+
+
+## JUnit LifeCycle Annotation
+> Junit5는 아래와 같은 테스트 라이프 사이클을 가지고 있다.
+
+| Annotation | Description                                         |
+|------------|:----------------------------------------------------|
+| @Test      | 테스트용 메소드를 표현하는 어노테이션                                |
+| @BeforEach | 각 테스트 메소드가 시작되기 전에 실행되어야 하는 메소드를 표현                 |
+| @AfterEach | 각 테스트 메소드가 시작된 후 실행되어야 하는 메소드를 표현                   |
+| @BeforeAll | 테스트 시작 전에 실행되어야 하는 메소드를 표현 (static 처리가 필요한 메소드에 사용) |
+| @AfterAll  | 테스트 종료 후에 실행되어야 하는 메소드를 표현 (static 처리가 필요한 메소드에 사용) |
+----
+## Main Annotation
+
+### SpringBootTest (SpringBoot 제공)
+- 통합 테스트 용도로 사용됨
+- @SpringBootApplication을 찾아가 하위의 모든 Bean을 스캔하여 로드함
+- 그 후 Test용 Application Context를 만들어 Bean을 추가하고, MockBean을 찾아 교체
+  - Aplication 클래스를 찾아가 로드를 해서 모든 Bean이 로드될 수 있게 해준다.
+
+### @ExtendWith(JUnit4)
+- Junit4에서 @RunWith로 사용되던 어노테이션이 ExtendWith로 변경됨
+- @ExtendWith는 메인으로 실행될 Class를 지정할 수 있음
+- @SpringBootTest는 기본적으로 @ExtendWith가 추가되어 있음
+
 
 
 

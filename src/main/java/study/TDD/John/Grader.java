@@ -1,4 +1,4 @@
-package study.test.John;
+package study.TDD.John;
 
 public class Grader {
     public char determineLetterGrade (int numberGrade) {
