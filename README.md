@@ -13,6 +13,6 @@
 #### - 3. TDD, 테스트 관련 강의 및 시연
   - url : https://www.youtube.com/playlist?list=PLwouWTPuIjUj_QqgXlFsqjUwyC0-5dZ_q
   - 코드 : [exercise](./src/test/java/study/TDD/exercise/PasswordMeterTest.java)
-  - 내용 정리 : [5. TDD 소개 및 시연] 
+  - 내용 정리 : [5. TDD 소개 및 시연](./study/3/5.TDD 소개 및 시연.md)
 ### 참고
 - jUnit5 가이드 : https://junit.org/junit5/docs/current/user-guide/
