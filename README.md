@@ -10,7 +10,7 @@
   - 요약 : 단위 테스트 한개로는 검증하지 못할 수 있다. 더 많은 단위 테스트를 추가해야 한다. 
   - 두 객체의 값 같은지 비교 : `assertEquals(expected, actual);`
   - 에러 검증 : `asertThrow(Class<T> expectedType, Executable executable)`
-#### - 3. TDD, 테스트 관련 강의 및 시연
+#### 3. TDD, 테스트 관련 강의 및 시연
   - url : https://www.youtube.com/playlist?list=PLwouWTPuIjUj_QqgXlFsqjUwyC0-5dZ_q
   - 코드 : [exercise](./src/test/java/study/TDD/exercise/PasswordMeterTest.java)
   - 내용 정리 : [5. TDD 소개 및 시연](./study/3/5.TDD 소개 및 시연.md)
