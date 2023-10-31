@@ -1,5 +1,5 @@
 ## 테스트코드 학습 정리
-> JUnit Test 코드 및 학습 내용 정리
+> JUnit, AssertJ 학습 내용 정리
 ### YouTube 강의(테스트 코드 적용하기) 
 #### 1. 테스트 코드 적용하기 (JUnit, TDD), 이론부분 학습 
   - url : https://youtu.be/SFVWo0Z5Ppo?si=9a-SJmJT7KmdKyqz
