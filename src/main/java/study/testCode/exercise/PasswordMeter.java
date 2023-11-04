@@ -1,4 +1,4 @@
-package study.TDD.exercise;
+package study.testCode.exercise;
 
 public class PasswordMeter {
     public PasswordStrength meter(String pw) {

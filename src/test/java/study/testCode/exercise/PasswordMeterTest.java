@@ -1,4 +1,4 @@
-package study.TDD.exercise;
+package study.testCode.exercise;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

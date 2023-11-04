@@ -1,4 +1,4 @@
-package study.TDD.John;
+package study.testCode.John;
 
 // Command + Shift + T : 테스트 생성 혹은 이동
 public class SimpleCalculator {

@@ -1,4 +1,4 @@
-package study.TDD;
+package study.testCode;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

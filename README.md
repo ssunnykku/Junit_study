@@ -14,6 +14,10 @@
   - 강의 : https://www.youtube.com/playlist?list=PLwouWTPuIjUj_QqgXlFsqjUwyC0-5dZ_q
   - 코드 : [exercise](./src/test/java/study/TDD/exercise/PasswordMeterTest.java)
   - 내용 정리 : [5. TDD 소개 및 시연](./study/3/5.TDD 소개 및 시연.md)
+
+#### 4. 우테코 프리코스 6기 JUnit and AssertJ 학습
+  - 요구사항 1,2,3
+  - 경로 : [woowaprecorse6](src%2Ftest%2Fjava%2Fstudy%2Fwoowaprecorse6)
 ### 참고
 - jUnit5 가이드 : https://junit.org/junit5/docs/current/user-guide/
-- AssertJ : https://assertj.github.io/doc/#overview-what-is-assertj
+- AssertJ :https://www.baeldung.com/introduction-to-assertj
